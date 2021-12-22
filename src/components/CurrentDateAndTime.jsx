@@ -1,13 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
+import useCurrentDateAndTime from '../hooks/useCurrentDateAndTime';
 
 const CurrentDateAndTime = () => {
-  const [currentDateAndTime, setCurrentDateAndTime] = useState(new Date());
-
-  useEffect(() => {
-    setInterval(() => {
-      setCurrentDateAndTime(new Date());
-    }, 1000);
-  }, [currentDateAndTime]);
+  const { currentDateAndTime } = useCurrentDateAndTime();
 
   return (
     <div>
