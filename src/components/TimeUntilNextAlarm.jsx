@@ -5,7 +5,7 @@ const TimeUntilNextAlarm = () => {
     <div>
       <h1>TimeUntilNextAlarm</h1>
     </div>
-  )
+  );
 };
 
 export default TimeUntilNextAlarm;

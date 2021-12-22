@@ -14,7 +14,7 @@ const CurrentDateAndTime = () => {
       <h2>Currently:</h2>
       <span>{currentDateAndTime.toString()}</span>
     </div>
-  )
+  );
 };
 
 export default CurrentDateAndTime;

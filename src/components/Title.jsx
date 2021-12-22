@@ -5,7 +5,7 @@ const Title = () => {
     <div>
       <h1>Fibonacci Alarm</h1>
     </div>
-  )
+  );
 };
 
 export default Title;

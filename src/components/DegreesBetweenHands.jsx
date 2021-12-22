@@ -5,7 +5,7 @@ const DegreesBetweenHands = () => {
     <div>
       <h1>DegreesBetweenHands</h1>
     </div>
-  )
+  );
 };
 
 export default DegreesBetweenHands;
