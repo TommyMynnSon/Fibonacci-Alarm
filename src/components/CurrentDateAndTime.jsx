@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const CurrentDateAndTime = () => {
+  const [currentDateAndTime, setCurrentDateAndTime] = useState(new Date());
+
+  useEffect(() => {
+    setInterval(() => {
+      setCurrentDateAndTime(new Date());
+    }, 1000);
+  }, [currentDateAndTime]);
+
   return (
     <div>
-      <h1>CurrentDateAndTime</h1>
+      <h2>Currently:</h2>
+      <span>{currentDateAndTime.toString()}</span>
     </div>
   )
 };
