@@ -3,7 +3,8 @@ import React from 'react';
 const TimeUntilNextAlarm = () => {
   return (
     <div>
-      <h1>TimeUntilNextAlarm</h1>
+      <h2>Time remaining until the next alarm:</h2>
+      <span></span>
     </div>
   );
 };
