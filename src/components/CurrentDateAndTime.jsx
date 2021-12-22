@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 import useCurrentDateAndTime from '../hooks/useCurrentDateAndTime';
 
@@ -8,7 +9,7 @@ const CurrentDateAndTime = () => {
   return (
     <div>
       <h2>Currently:</h2>
-      <span>{currentDateAndTime.toString()}</span>
+      <span>{moment(currentDateAndTime).format('LTS')}</span>
     </div>
   );
 };
