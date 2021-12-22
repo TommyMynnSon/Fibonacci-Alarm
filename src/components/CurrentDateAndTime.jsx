@@ -1,11 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import useCurrentDateAndTime from '../hooks/useCurrentDateAndTime';
-
-const CurrentDateAndTime = () => {
-  const { currentDateAndTime } = useCurrentDateAndTime();
-
+const CurrentDateAndTime = ({ currentDateAndTime }) => {
   return (
     <div>
       <h2>Currently:</h2>

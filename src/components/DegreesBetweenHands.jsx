@@ -1,15 +1,12 @@
 import React from 'react';
-
-import useCurrentDateAndTime from '../hooks/useCurrentDateAndTime';
+import moment from 'moment';
 
 import getDegreesBetweenHands from '../utils/clockDegrees';
 
-const DegreesBetweenHands = () => {
-  const { currentDateAndTime } = useCurrentDateAndTime();
-
+const DegreesBetweenHands = ({ currentDateAndTime }) => {
   return (
     <div>
-      <h2>{`Degrees between hour hand at ${currentDateAndTime.getHours()} and minute hand at ${currentDateAndTime.getMinutes()}:`}</h2>
+      <h2>{`Degrees between hour hand at ${moment(currentDateAndTime).format('h')} and minute hand at ${moment(currentDateAndTime).format('m')}:`}</h2>
       <span>{getDegreesBetweenHands(currentDateAndTime)}</span>
     </div>
   );
