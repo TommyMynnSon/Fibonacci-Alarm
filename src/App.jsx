@@ -11,7 +11,7 @@ import useCurrentDateAndTime from './hooks/useCurrentDateAndTime';
 import useCurrentFibonacciNumbers from './hooks/useCurrentFibonacciNumbers';
 
 // Styles
-import styles from './styles/center.css';
+import './styles/center.css';
 
 const App = () => {
   const { currentDateAndTime } = useCurrentDateAndTime();

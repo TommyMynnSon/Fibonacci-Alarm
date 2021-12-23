@@ -15,7 +15,8 @@ const TimeUntilNextAlarm = ({ currentDateAndTime, currentFibonacciNumbers, setCu
         const numberAtIndex1 = prev[1].number;
 
         const nextWhen = new Date();
-        // nextWhen.setSeconds(nextWhen.getSeconds() + 5);
+
+        // nextWhen.setSeconds(nextWhen.getSeconds() + numberAtIndex1);
         nextWhen.setHours(nextWhen.getHours() + numberAtIndex1);
 
         prev[1].when = nextWhen;
