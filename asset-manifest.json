@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Fibonacci-Alarm/static/css/main.9ad7fddf.css",
+    "main.js": "/Fibonacci-Alarm/static/js/main.128aff15.js",
+    "index.html": "/Fibonacci-Alarm/index.html",
+    "main.9ad7fddf.css.map": "/Fibonacci-Alarm/static/css/main.9ad7fddf.css.map",
+    "main.128aff15.js.map": "/Fibonacci-Alarm/static/js/main.128aff15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ad7fddf.css",
+    "static/js/main.128aff15.js"
+  ]
+}
