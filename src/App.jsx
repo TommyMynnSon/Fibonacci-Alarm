@@ -10,6 +10,9 @@ import TimeUntilNextAlarm from './components/TimeUntilNextAlarm';
 import useCurrentDateAndTime from './hooks/useCurrentDateAndTime';
 import useCurrentFibonacciNumbers from './hooks/useCurrentFibonacciNumbers';
 
+// Styles
+import styles from './styles/center.css';
+
 const App = () => {
   const { currentDateAndTime } = useCurrentDateAndTime();
   const { currentFibonacciNumbers, setCurrentFibonacciNumbers } = useCurrentFibonacciNumbers();
@@ -27,7 +30,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className='center'>
       <Title />
       <CurrentTime currentDateAndTime={currentDateAndTime} />
       <DegreesBetweenHands currentDateAndTime={currentDateAndTime} />

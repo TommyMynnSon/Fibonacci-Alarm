@@ -2,7 +2,7 @@ import React from 'react';
 
 const Title = () => {
   return (
-    <div>
+    <div className='center'>
       <h1>Fibonacci Alarm</h1>
     </div>
   );

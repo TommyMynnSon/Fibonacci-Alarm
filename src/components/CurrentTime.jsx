@@ -3,7 +3,7 @@ import moment from 'moment';
 
 const CurrentTime = ({ currentDateAndTime }) => {
   return (
-    <div>
+    <div className='center'>
       <h2>Currently:</h2>
       <span>{moment(currentDateAndTime).format('LTS')}</span>
     </div>

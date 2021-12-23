@@ -33,7 +33,7 @@ const TimeUntilNextAlarm = ({ currentDateAndTime, currentFibonacciNumbers, setCu
   }, [currentDateAndTime]);
 
   return (
-    <div>
+    <div className='center'>
       <h2>Time remaining until the next alarm:</h2>
       <span>{remainingBreakdown.includes('NaN') ? 'LOADING : LOADING : LOADING : LOADING : LOADING : LOADING : LOADING' : remainingBreakdown}</span>
     </div>
