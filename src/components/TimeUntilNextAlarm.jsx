@@ -7,7 +7,7 @@ const TimeUntilNextAlarm = ({ currentDateAndTime, currentFibonacciNumbers, setCu
   const [remainingBreakdown, setRemainingBreakdown] = useState('');
 
   useEffect(() => {
-    if (shouldAlarmTrigger(currentDateAndTime, currentFibonacciNumbers)) {
+    if (shouldAlarmTrigger(currentDateAndTime, currentFibonacciNumbers)) { // <------- replace the conditional in the if statement with true to instant skip alarms
       console.log(`Alarm triggered for fibonacci number ${currentFibonacciNumbers[0].number}.`)
 
       setCurrentFibonacciNumbers((prev) => {
