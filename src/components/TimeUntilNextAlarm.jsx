@@ -1,35 +1,41 @@
-import React from 'react';
-import moment from 'moment';
+import React, { useState, useEffect } from 'react';
 
-const shouldAlarmTrigger = () => {
-  return false;
-};
-
-const getTimeUntilNextAlarm = (currentDateAndTime, currentFibonacciNumbers, setCurrentFibonacciNumbers) => {
-  if (shouldAlarmTrigger()) {
-    setCurrentFibonacciNumbers((prev) => {
-      const numberAtIndex0 = prev[0].number;
-      const numberAtIndex1 = prev[1].number;
-
-      const nextWhen = currentDateAndTime.setHours(currentDateAndTime.getHours() + numberAtIndex1);
-      const nextNumber = numberAtIndex0 + numberAtIndex1;
-
-      prev[1].when = nextWhen;
-      prev.push({ number: nextNumber, when: null });
-      prev.shift();
-    });
-  }
-
-  const duration = moment.duration(moment(currentFibonacciNumbers[0].when).diff(moment(currentDateAndTime)));
-
-  return `${duration.years()} years : ${duration.months()} months : ${duration.weeks()} weeks : ${duration.days()} days : ${duration.hours()} hours : ${duration.minutes()} minutes : ${duration.seconds()} seconds`;
-};
+import { shouldAlarmTrigger, getTimeUntilNextAlarm } from '../utils/nextAlarm';
 
 const TimeUntilNextAlarm = ({ currentDateAndTime, currentFibonacciNumbers, setCurrentFibonacciNumbers }) => {
+  const [remainingBreakdown, setRemainingBreakdown] = useState('');
+
+  useEffect(() => {
+    if (shouldAlarmTrigger(currentDateAndTime, currentFibonacciNumbers)) {
+      console.log(`Alarm triggered for fibonacci number ${currentFibonacciNumbers[0].number}.`)
+
+      setCurrentFibonacciNumbers((prev) => {
+        const numberAtIndex0 = prev[0].number;
+        const numberAtIndex1 = prev[1].number;
+
+        // const nextWhen = prev[0].when.setHours(prev[0].when.getHours() + numberAtIndex1);
+        const nextWhen = new Date();
+        // nextWhen.setSeconds(nextWhen.getSeconds() + 5);
+        nextWhen.setHours(nextWhen.getHours() + numberAtIndex1);
+
+        prev[1].when = nextWhen;
+
+        const nextNumber = numberAtIndex0 + numberAtIndex1;
+        prev.push({ number: nextNumber, when: null });
+
+        prev.shift();
+
+        return prev;
+      });
+    }
+
+    setRemainingBreakdown(getTimeUntilNextAlarm(currentDateAndTime, currentFibonacciNumbers));
+  }, [currentDateAndTime]);
+
   return (
     <div>
       <h2>Time remaining until the next alarm:</h2>
-      <span>{getTimeUntilNextAlarm(currentDateAndTime, currentFibonacciNumbers, setCurrentFibonacciNumbers)}</span>
+      <span>{remainingBreakdown.includes('NaN') ? 'LOADING : LOADING : LOADING : LOADING : LOADING : LOADING : LOADING' : remainingBreakdown}</span>
     </div>
   );
 };

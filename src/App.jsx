@@ -12,8 +12,15 @@ const App = () => {
   const { currentDateAndTime } = useCurrentDateAndTime();
   const { currentFibonacciNumbers, setCurrentFibonacciNumbers } = useCurrentFibonacciNumbers();
 
+  // console.log('currentDateAndTime:', currentDateAndTime);
+  // console.log('currentFibonacciNumbers:', currentFibonacciNumbers);
+
   useEffect(() => {
+    // console.log('useEffect before if');
+
     if (currentFibonacciNumbers[0].number === 0) {
+      // console.log('useEffect after if');
+
       setCurrentFibonacciNumbers((prev) => {
         console.log('Welcome! Since it\'s your first time using my Fibonacci Alarm, an alarm gets triggered (this message) since the first fibonacci number is 0 and 0 hours from now is, well, now!');
 
@@ -29,7 +36,7 @@ const App = () => {
       <Title />
       <CurrentDateAndTime currentDateAndTime={currentDateAndTime} />
       <DegreesBetweenHands currentDateAndTime={currentDateAndTime} />
-      <TimeUntilNextAlarm currentDateAndTime={currentDateAndTime} currentFibonacciNumbers={currentFibonacciNumbers} setCurrentFibonacciNumbers={setCurrentFibonacciNumbers} />
+      {currentFibonacciNumbers && <TimeUntilNextAlarm currentDateAndTime={currentDateAndTime} currentFibonacciNumbers={currentFibonacciNumbers} setCurrentFibonacciNumbers={setCurrentFibonacciNumbers} />}
     </div>
   );
 };

@@ -8,6 +8,7 @@ const useCurrentFibonacciNumbers = () => {
       const when = new Date();
 
       when.setHours(when.getHours() + prev[1].number);
+      // when.setSeconds(when.getSeconds() + 5);
 
       return [{ ...prev[0] }, { ...prev[1], when }, { ...prev[2] }]
     });

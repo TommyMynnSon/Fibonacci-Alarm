@@ -7,7 +7,7 @@ const useCurrentDateAndTime = () => {
     setInterval(() => {
       setCurrentDateAndTime(new Date());
     }, 1000);
-  }, [currentDateAndTime]);
+  }, []);
 
   return { currentDateAndTime };
 };
