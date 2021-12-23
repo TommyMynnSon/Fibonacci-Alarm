@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
+// Utility Functions
 import getDegreesBetweenHands from '../utils/clockDegrees';
 
 const DegreesBetweenHands = ({ currentDateAndTime }) => {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+// Utility Functions
 import { shouldAlarmTrigger, getTimeUntilNextAlarm } from '../utils/nextAlarm';
 
 const TimeUntilNextAlarm = ({ currentDateAndTime, currentFibonacciNumbers, setCurrentFibonacciNumbers }) => {
