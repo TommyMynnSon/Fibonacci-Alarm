@@ -27,4 +27,5 @@ If instead, you want to see the application treat fibonacci numbers as durations
 
 ## Dependencies
 
-Aside from the default dependencies listed in the package.json file of a fresh Create React App, `"moment": "^2.29.1"` was used heavily in this application for working with `Date` objects.
+- Aside from the default dependencies listed in the package.json file of a fresh Create React App, `"moment": "^2.29.1"` was used heavily in this application for working with `Date` objects.
+- Node v16.13.1 was used.
