@@ -4,7 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![image](https://user-images.githubusercontent.com/28680171/147181930-1783f6d7-af67-4246-9253-fbd0aa07bc38.png)
 
-## How to Get Started
+## GitHub Pages Deployment Link 
+https://tommymynnson.github.io/Fibonacci-Alarm/
+
+## How to Get Started Locally
 
 - Clone the repository.
 - Run `npm install` in the root directory.
