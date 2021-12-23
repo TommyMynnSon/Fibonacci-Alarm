@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 // Components
 import Title from './components/Title';
-import CurrentDateAndTime from './components/CurrentDateAndTime';
+import CurrentTime from './components/CurrentTime';
 import DegreesBetweenHands from './components/DegreesBetweenHands';
 import TimeUntilNextAlarm from './components/TimeUntilNextAlarm';
 
@@ -29,7 +29,7 @@ const App = () => {
   return (
     <div>
       <Title />
-      <CurrentDateAndTime currentDateAndTime={currentDateAndTime} />
+      <CurrentTime currentDateAndTime={currentDateAndTime} />
       <DegreesBetweenHands currentDateAndTime={currentDateAndTime} />
       {currentFibonacciNumbers && <TimeUntilNextAlarm currentDateAndTime={currentDateAndTime} currentFibonacciNumbers={currentFibonacciNumbers} setCurrentFibonacciNumbers={setCurrentFibonacciNumbers} />}
     </div>

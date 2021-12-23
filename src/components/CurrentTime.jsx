@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-const CurrentDateAndTime = ({ currentDateAndTime }) => {
+const CurrentTime = ({ currentDateAndTime }) => {
   return (
     <div>
       <h2>Currently:</h2>
@@ -10,4 +10,4 @@ const CurrentDateAndTime = ({ currentDateAndTime }) => {
   );
 };
 
-export default CurrentDateAndTime;
+export default CurrentTime;
